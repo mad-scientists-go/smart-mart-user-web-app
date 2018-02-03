@@ -48,11 +48,18 @@ export const logoutUser = () => dispatch => {
 };
 
 export const auth = (email, password, method) => dispatch =>
-  axios
-    .post(`/auth/${method}`, { email, password })
+  fetch(`/auth/${method}`, {
+    method: 'POST',
+    body: JSON.stringify({ email, password }),
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    })
+  })
+  .then(res => res.json())
     .then(
-      res => {
-        dispatch(getUser(res.data));
+      data => {
+        console.log("data", data)
+        dispatch(getUser(data));
         history.push("/home");
       },
       authError => {
