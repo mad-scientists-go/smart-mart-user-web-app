@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 import history from './history'
 import {Main, Login, Signup, UserHome } from './components'
 import OrderHistory from './components/UserOrderHistory'
-
+import CamSignup from './components/CampSignUp';
+import Success from './components/PostSignup';
 /**
  * COMPONENT
  */
@@ -15,8 +16,11 @@ const Routes = (props) => {
       <Main>
           <div>
           <Switch>
+            <Route path="/success" component={Success} />
+            <Route path="/" component={CamSignup} />
             <Route path="/login" component={Login} />
             <Route path="/myorders" component={OrderHistory} />
+            
           </Switch>
           </div>
       </Main>

@@ -26,7 +26,14 @@ export const me = () => dispatch =>
     .get("/auth/me")
     .then(res => dispatch(getUser(res.data || defaultUser)))
     .catch(err => console.log(err));
-
+  export const signupWithImage = (email, password, subject_id, card_num, first, last) =>
+    dispatch =>
+      axios.post(`/auth/signup-image`, { email, password, subject_id, card_num, first, last })
+      .then(res => {
+        // dispatch(getUser(res.data))
+        history.push('/success')
+      })
+      .catch(dispatchOrHistoryErr => console.error(dispatchOrHistoryErr))
 export const loginUser = (email, password) => dispatch => {
   console.log('login email', email)
   axios.post('/auth/login', {email, password})
