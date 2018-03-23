@@ -1,6 +1,6 @@
 # smart mart user web app
 
-This is the web app companion for smart mart. The main function of this is app is for a user to view past reciepts online. This rest of this readme contains info about Create React App which was used to bootstrap this project. For more info about the rest of smart mart see the [shopping go repo's readme] (https://github.com/mad-scientists-go/shopping-go).
+This is the web app companion for smart mart. The main function of this is app is for a user to view past reciepts online. This rest of this readme contains info about Create React App which was used to bootstrap this project. For more info about the rest of smart mart see the [shopping go repo's readme](https://github.com/mad-scientists-go/shopping-go).
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
